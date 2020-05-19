@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ATM Cashflow{% endblock %}
+{% block body %}
+    {% include 'navigator.html' %}
+
+    <link rel="shortcut icon" href="{% static 'img/icon.png' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.css' %}"/>
+    <script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-ui.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.ui.datepicker-ru.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/admin.js' %}"></script>
+
+    {% if error_message %}
+        <div class="error"> {{ error_message }}</div>
+    {% endif %}
+    {% if success_message %}
+        <div class="success">{{ success_message }}</div>
+    {% endif %}
+
+    <div class="intro" style="margin-top: 50px;">
+        <div class="video">
+            <video class="video_media" src="{% static 'media/Video.mp4' %}" autoplay muted loop></video>
+        </div>
+        <div class="intro_content">
+            <div id="container">
+                <div id="content">
+                    <a class="title-name" href="/prediction">
+                        Предикативная система оборотов денежных средств банкоматов</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

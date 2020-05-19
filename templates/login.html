@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Авторизация{% endblock %}
+{% block body %}
+    {% include 'navigator.html' %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="sign_in" style="width: 30%; padding: 30px">
+            <label style="margin-left: 90px; padding: 5px; font-weight: 700; font-size: 1.5em; color: #405cbf;">Авторизация</label>
+            {% if errors != 0 %}
+                {% for error in errors %}
+                    <br>
+                    <div style="color: #ff3d44">{{ error }}.</div>
+                {% endfor %}
+            {% endif %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="btn btn-primary">Войти</button>
+            <br><br>
+
+            Ещё не зарегистрированы?<br>
+            <a href="/registration">
+                <button type="button" name="reg" class="btn btn-primary">Перейти к регистрации</button>
+            </a><br>
+        </div>
+    </form>
+
+{% endblock %}

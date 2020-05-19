@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ATM Cashflow{% endblock %}
+{% block body %}
+    {% include 'navigator.html' %}
+
+    <link rel="shortcut icon" href="{% static 'img/icon.png' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.css' %}"/>
+    <script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-ui.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.ui.datepicker-ru.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/admin.js' %}"></script>
+
+    {% if error_message %}
+        <div class="error"> {{ error_message }}</div>
+    {% endif %}
+    {% if success_message %}
+        <div class="success">{{ success_message }}</div>
+    {% endif %}
+
+    <div class="intro" style="margin-top: 50px;">
+        <div class="video">
+            <video class="video_media" src="{% static 'media/Video.mp4' %}" autoplay muted loop></video>
+        </div>
+        <div class="intro_content">
+            <div id="container">
+                <div id="content">
+                    <form id="main_form" action="/" method="POST" enctype="multipart/form-data"
+                          style="padding-top:15px;">
+                        {% csrf_token %}
+                        <div id="main_info">
+                            <label for="names">Банкомат: </label>
+                            <select id="atm_name" name="names" class="items">
+                                {% for name in names %}
+                                    <option>{{ name }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="date">Дата: </label>
+                            <input type="text" name="date" id="date" class="items">
+                        </div>
+                        <div id="main_info">
+                            <label for="festival">Праздник: </label>
+                            <select id="festival" class="festival items" name="festival">
+                                <option value=1>Да</option>
+                                <option value=0>Нет</option>
+                            </select>
+                            <label for="working_day">Рабочий день: </label>
+                            <select id="working_day" class="working_day items" name="working_day">
+                                <option value=1>Да</option>
+                                <option value=0>Нет</option>
+                            </select>
+                        </div>
+                        <p id="total" style="display:none">Необходимая сумма для вноса в банкомат: <span></span> руб.
+                        </p>
+
+                        <input type="button" value="Рассчитать" id="calculation">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

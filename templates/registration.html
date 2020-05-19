@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Регистрация{% endblock %}
+{% block body %}
+    {% include 'navigator.html' %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="sign_up" style="width: 30%; padding: 15px">
+            <label style="margin-left: 90px; padding: 5px; font-weight: 700; font-size: 1.5em; color: #405cbf;">Регистрация</label>
+
+            {% if errors != 0 %}
+                {% for error in errors %}
+                    <div style="color: red"><br>{{ error }}.</div>
+                {% endfor %}
+            {% endif %}
+
+            {{ form.as_p }}
+            <br>
+            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            <br><br>
+            {% if success != 0 %}
+                {{ success }}<br>
+            {% endif %}
+
+            <a href="/login">
+                <button type="button" name="signIn" class="btn btn-primary">Перейти к авторизации</button>
+            </a><br>
+        </div>
+    </form>
+{% endblock %}

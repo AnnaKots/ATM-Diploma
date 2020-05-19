@@ -1,0 +1,150 @@
+@charset "UTF-8";
+html {
+    padding: 0;
+    width: 100%;
+    min-width: 960px;
+    margin: 0;
+}
+
+body {
+    background: url(../img/background.jpg);
+    width: 100%;
+    min-width: 960px;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 45px;
+    margin: 0 auto;
+    background: #309bb6;
+    padding: 0;
+    min-width: 960px;
+}
+
+#container {
+    margin: 0 auto;
+    min-width: 960px;
+    padding: 0 0 40px 0;
+    width: 75%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: white;
+    /*background:-webkit-gradient(linear, center top, center bottom, from(#98ACB9),color-stop(100%, #577681));background:-webkit-linear-gradient(top,#98ACB9 ,#577681 100%);background:linear-gradient(to bottom,#98ACB9 ,#577681 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF98ACB9, endColorstr=#FF577681, GradientType=0);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF98ACB9', endColorstr='#FF577681', GradientType=0)";*/
+}
+
+#content {
+    width: 100%;
+    background: white;
+}
+
+#header_box {
+    margin: 0 auto;
+    width: 75%;
+    min-width: 960px;
+    padding: 0;
+}
+
+#count {
+    height: 24px;
+    margin: 10px 0 0 12px;
+}
+
+#line {
+    width: 100%;
+    background: #309bb6;
+    height: 20px;
+}
+
+#login {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 300px;
+    margin-top: -200px;
+    margin-left: -150px;
+    background: white;
+    z-index: 100;
+    border-radius: 30px;
+    padding: 40px 50px;
+    border: 1px solid black;
+}
+
+#login img {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 25px;
+    cursor: pointer;
+}
+
+#login_box {
+    width: 200px;
+    height: 400px;
+    text-align: center;
+}
+
+#login h2 {
+    text-align: center;
+    color: #4682B4;
+}
+
+#regRef {
+    color: #FF0000;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+#regRef a {
+    color: #FF0000;
+}
+
+#regRef a:hover {
+    color: #FFA500;
+}
+
+#login input[type="submit"] {
+    width: 130px;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 16px;
+    background: #4682B4;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.error {
+    height: 50px;
+    width: 400px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -200px;
+    border: 1px black solid;
+    background: white;
+    text-align: center;
+    line-height: 50px;
+    color: red;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.success {
+    height: 50px;
+    width: 400px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -200px;
+    border: 1px black solid;
+    background: white;
+    text-align: center;
+    line-height: 50px;
+    color: #ADFF2F;
+    border-radius: 5px;
+    z-index: 1000;
+}
