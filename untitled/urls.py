@@ -17,16 +17,18 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from Diplom.views import index, login, logoutView, registration, calculate, start
+from Diplom.views import index, index_for_all, login, logoutView, registration, calculate, calculate_for_all, start
 
 app_name = 'Diplom'
 
 urlpatterns = [
     url(r'^$', start, name='start'),
     url(r'^calculate/', calculate, name='calculate'),
+    url(r'^for_all_calculate/', calculate_for_all, name='calculate_for_all'),
     url(r'^admin/', admin.site.urls),
     url(r'^login/', login, name='login'),
     url(r'^logout/', logoutView, name='logout'),
     url(r'^registration/', registration),
     url(r'^prediction', index, name='index'),
+    url(r'^for_all_prediction', index_for_all, name='index_for_all'),
 ]

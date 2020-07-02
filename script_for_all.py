@@ -11,10 +11,9 @@ warnings.filterwarnings('ignore')
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        atm_name = sys.argv[1]
-        date = sys.argv[2]
-        festival = int(sys.argv[3])
-        working_day = int(sys.argv[4])
+        date = sys.argv[1]
+        festival = int(sys.argv[2])
+        working_day = int(sys.argv[3])
 
 
 def root_mean_squared_error(y_true, y_pred):
@@ -26,11 +25,16 @@ model = load_model('mlp_final.h5', custom_objects={'root_mean_squared_error': ro
 
 from sklearn.externals import joblib
 
+names = ['Главная_улица', 'Парк', 'Аэропорт', 'Центр', 'Университет']
 # Загружаем модель из файла
 encoder = joblib.load("encoder1.save")
 
-data = pd.DataFrame(
-    {u'Банкомат': [atm_name], u'Дата': [date], u'Праздник': [int(festival)], u'Рабочий день': [working_day]})
+data_list = []
+for i in range(len(names)):
+    data_list.append(
+        {u'Банкомат': names[i], u'Дата': date, u'Праздник': int(festival), u'Рабочий день': working_day})
+
+data = pd.DataFrame(data_list)
 
 data[u'Дата'] = data[u'Дата'].apply(pd.to_datetime)
 
@@ -46,4 +50,5 @@ data.drop([u'Дата'], inplace=True, axis=1)
 encoded_data = encoder.transform(data)
 
 result = model.predict(encoded_data)
-print(int(result[0][0]))
+for i in range(len(names)):
+    print(int(result[i][0]))

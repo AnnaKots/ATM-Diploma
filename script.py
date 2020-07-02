@@ -16,6 +16,8 @@ if __name__ == "__main__":
         festival = int(sys.argv[3])
         working_day = int(sys.argv[4])
 
+        
+
 
         def root_mean_squared_error(y_true, y_pred):
             return K.sqrt(K.mean(K.square(y_pred - y_true), axis=-1))
@@ -28,7 +30,6 @@ if __name__ == "__main__":
 
         # Загружаем модель из файла
         encoder = joblib.load("encoder1.save")
-
         data = pd.DataFrame(
             {u'Банкомат': [atm_name], u'Дата': [date], u'Праздник': [int(festival)], u'Рабочий день': [working_day]})
 
@@ -45,6 +46,5 @@ if __name__ == "__main__":
         data.drop([u'Дата'], inplace=True, axis=1)
 
         encoded_data = encoder.transform(data)
-
         result = model.predict(encoded_data)
         print(int(result[0][0]))

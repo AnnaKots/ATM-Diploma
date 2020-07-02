@@ -37,6 +37,17 @@ def index(request):
                    "user_name": username})
 
 
+def index_for_all(request):
+    error_message = request.GET.get("error_message", "")
+    success_message = request.GET.get("success_message", "")
+    username = None
+    if not request.user.is_authenticated:
+        return redirect(reverse('login'))
+    return render(request, "for_all_index.html",
+                  {"success_message": success_message, "error_message": error_message,
+                   "user_name": username})
+
+
 def logoutView(request):
     logout(request)
     return HttpResponseRedirect('/login/')
@@ -110,8 +121,29 @@ def calculate(request):
         festival = int(ret["festival"].replace('"', ''))
         working_day = int(ret["working_day"].replace('"', ''))
 
+        print('ВРЕМЯ ДО')
         a = os.popen(
             'python script.py ' + '"' + atm_name + '"' + ' ' + '"' + date + '"' + ' ' + str(festival) + ' ' + str(
+                working_day)).read()
+        print('ВРЕМЯ ПОСЛЕ')
+        print(a)
+        return HttpResponse(a)
+    username = None
+    if not request.user.is_authenticated:
+        return redirect(reverse('login'))
+
+
+def calculate_for_all(request):
+    error_message = request.GET.get("error_message", "")
+    success_message = request.GET.get("success_message", "")
+    if request.method == 'POST':
+        ret = request.POST
+        date = "'" + (ret["date"]) + "'"
+        festival = int(ret["festival"].replace('"', ''))
+        working_day = int(ret["working_day"].replace('"', ''))
+
+        a = os.popen(
+            'python script_for_all.py ' + '"' + str(date) + '"' + ' ' + str(festival) + ' ' + str(
                 working_day)).read()
         print(a)
         return HttpResponse(a)

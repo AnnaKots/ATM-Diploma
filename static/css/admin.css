@@ -24,6 +24,13 @@ header {
     min-width: 960px;
 }
 
+label {
+    vertical-align: auto;
+    text-align: left;
+    padding-right: 5px;
+    padding-left: 0px;
+}
+
 .intro_content {
     padding-top: 10%;
     display: block;
@@ -43,13 +50,13 @@ header {
     min-width: 500px;
     width: 100%;
     min-height: 550px;
-    margin: 30px auto;
+    margin: 15px auto;
     background-color: transparent;
     text-align: center;
 }
 
 #content {
-    width: 90%;
+    width: 100%;
     min-height: 450px;
     /*margin-left: 8%;*/
 }
@@ -87,7 +94,7 @@ img {
 }
 
 input, select {
-    margin-right: 20px;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
 
@@ -122,10 +129,10 @@ span {
 }
 
 #main_info {
-    text-align: center;
+    /*text-align: center;*/
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     display: block;
     font-size: 15px;
     line-height: 20px;
@@ -140,17 +147,30 @@ span {
     vertical-align: top;
 }
 
-#total {
+#total_head {
     text-align: center;
-    margin-top: 50px;
+    /*text-align: right;
+    margin-right: 17%;*/
+    margin-top: 30px;
     font-size: 25px;
     color: #111;
+    font-family: Bookman, URW Bookman L, serif;
 }
 
-#total span {
+#total, #total1, #total2, #total3, #total4 {
+    text-align: center;
+    /*text-align: right;
+    margin-right: 17%;*/
+    font-size: 20px;
+    color: #111;
+    font-family: serif;
+}
+
+
+#total span, #total1 span, #total2 span, #total3 span, #total4 span {
     font-weight: bold;
     font-family: serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .res_info {
@@ -177,7 +197,7 @@ span {
     margin-top: 60px;
 }
 
-#calculation {
+#calculation, #calculation_for_all {
     font-weight: bold;
     margin-top: 20px;
     font-size: 25px;
@@ -189,13 +209,16 @@ span {
 }
 
 #calculation:hover:before,
-#calculation:hover:after {
+#calculation:hover:after,
+#calculation_for_all:hover:before,
+#calculation_for_all:hover:after {
     height: 100%;
     width: 100%;
     opacity: 1;
 }
 
-#calculation:hover {
+#calculation:hover,
+#calculation_for_all:hover {
     background: rgba(255, 255, 255, .2);
 }
 
@@ -291,10 +314,10 @@ span {
 
 .navbar {
     overflow: hidden;
-    background-color: #333;
     position: fixed;
     top: 0;
     width: 100%;
+    background: url(../img/cover_crop.jpg) no-repeat center center;
 }
 
 .navbar a {
@@ -305,6 +328,19 @@ span {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+}
+
+.navbar:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, .85);
+    z-index: -1;
+    background-size: cover;
+    opacity: 1;
 }
 
 .items {

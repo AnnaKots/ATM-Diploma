@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c9be188-f9b1-40fb-babe-2fab39f67887" name="Default Changelist" comment="" />
+    <list default="true" id="7c9be188-f9b1-40fb-babe-2fab39f67887" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/img/cover_crop.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/for_all_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diplom/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Diplom/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diplom/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Diplom/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/script_for_all.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navigator.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navigator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,13 +52,20 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bjD0ySBk0FvJ7zXqXlIjQt1UQS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql&#10;sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -59,18 +80,18 @@
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\untitled\static\media" />
+      <recent name="C:\Users\User\PycharmProjects\untitled\Diplom" />
+      <recent name="C:\Users\User\PycharmProjects\untitled\static\css" />
+      <recent name="C:\Users\User\PycharmProjects\untitled\static\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\PycharmProjects\untitled" />
       <recent name="C:\Users\User\PycharmProjects\untitled\static" />
       <recent name="C:\Users\User\PycharmProjects\untitled\static\js" />
       <recent name="C:\Users\User\PycharmProjects\untitled\static\css" />
       <recent name="C:\Users\User\PycharmProjects\untitled\templates" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\PycharmProjects\untitled\static\media" />
-      <recent name="C:\Users\User\PycharmProjects\untitled\Diplom" />
-      <recent name="C:\Users\User\PycharmProjects\untitled\static\css" />
-      <recent name="C:\Users\User\PycharmProjects\untitled\static\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -140,11 +161,23 @@
       <workItem from="1589462344961" duration="2014000" />
       <workItem from="1589660583971" duration="42332000" />
       <workItem from="1589749790659" duration="43263000" />
+      <workItem from="1590250696064" duration="796000" />
+      <workItem from="1590435108031" duration="593000" />
+      <workItem from="1590483523838" duration="27975000" />
+      <workItem from="1590581739386" duration="6598000" />
+      <workItem from="1590672775514" duration="1995000" />
+      <workItem from="1591101890083" duration="3557000" />
+      <workItem from="1591382910400" duration="760000" />
+      <workItem from="1591815829718" duration="217000" />
+      <workItem from="1593677265401" duration="33000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="11" y="0" key="#Notifications" timestamp="1589303948917">
@@ -159,10 +192,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="138" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1589361588544" />
-    <state x="265" y="71" key="FileChooserDialogImpl" timestamp="1589317417024">
+    <state x="265" y="71" key="FileChooserDialogImpl" timestamp="1593677295518">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="265" y="71" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1589317417024" />
+    <state x="265" y="71" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593677295518" />
     <state width="777" height="162" key="GridCell.Tab.0.bottom" timestamp="1589303663223">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -187,14 +220,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1589317259295" />
-    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1589749796900">
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1593677268629">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1589749796900" />
-    <state x="210" y="0" width="609" height="680" key="find.popup" timestamp="1589837814588">
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1593677268629" />
+    <state x="210" y="0" width="609" height="680" key="find.popup" timestamp="1591102393730">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="210" y="0" width="609" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1589837814588" />
+    <state x="210" y="0" width="609" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1591102393730" />
     <state x="71" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1589287218834">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

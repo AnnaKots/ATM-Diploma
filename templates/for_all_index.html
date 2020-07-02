@@ -30,32 +30,33 @@
                           style="padding-top:15px;">
                         {% csrf_token %}
                         <div id="main_info">
-                            <label for="names" style="width: 160px;">Банкомат: </label>
-                            <select id="atm_name" name="names" class="items">
-                                {% for name in names %}
-                                    <option>{{ name }}</option>
-                                {% endfor %}
-                            </select>
-                            <label for="date" style="width: 120px;">Дата: </label>
+                            <label for="date">Дата: </label>
                             <input type="text" name="date" id="date" class="items">
-                        </div>
-                        <div id="main_info">
-                            <label for="festival" style="width: 160px;">Праздничный день: </label>
+                            <label for="festival">Праздничный день: </label>
                             <select id="festival" class="festival items" name="festival">
                                 <option value=0>Нет</option>
                                 <option value=1>Да</option>
                             </select>
-                            <label for="working_day" style="width: 120px;">Рабочий день: </label>
+                            <label for="working_day">Рабочий день: </label>
                             <select id="working_day" class="working_day items" name="working_day">
                                 <option value=1>Да</option>
                                 <option value=0>Нет</option>
                             </select>
                         </div>
-                        <p id="total_head" style="display:none">Необходимая сумма для внесения в банкомат: </p>
-                        <p id="total" style="display:none;"><span style="font-size: 30px!important;"></span> руб.
+                        <p id="total_head" style="display:none;"><strong>Необходимая сумма для внесения в
+                            банкоматы:</strong></p>
+                        <p id="total" style="display:none;"><span></span> руб.
+                        </p>
+                        <p id="total1" style="display:none"><span></span> руб.
+                        </p>
+                        <p id="total2" style="display:none"><span></span> руб.
+                        </p>
+                        <p id="total3" style="display:none"><span></span> руб.
+                        </p>
+                        <p id="total4" style="display:none"><span></span> руб.
                         </p>
 
-                        <input type="button" value="Рассчитать" id="calculation">
+                        <input type="button" value="Рассчитать" id="calculation_for_all">
                     </form>
                 </div>
             </div>
